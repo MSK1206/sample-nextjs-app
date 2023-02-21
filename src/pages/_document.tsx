@@ -1,13 +1,18 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import NextDocument, { Head, Html, Main, NextScript } from "next/document";
 
-export default function Document() {
-  return (
-    <Html lang="en">
-      <Head />
-      <body>
-        <Main />
-        <NextScript />
-      </body>
-    </Html>
-  )
+interface Props {}
+class Document extends NextDocument<Props> {
+  render() {
+    return (
+      <Html lang="ja" prefix="og: https://ogp.me/ns#">
+        <Head />
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
 }
+
+export default Document;

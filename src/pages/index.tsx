@@ -1,7 +1,7 @@
 import { SeoHead } from "@/components/seohead";
 import styles from "@/styles/Home.module.css";
 
-export const Home = () => {
+export default function Home() {
   return (
     <>
       <SeoHead
@@ -16,4 +16,4 @@ export const Home = () => {
       </main>
     </>
   );
-};
+}

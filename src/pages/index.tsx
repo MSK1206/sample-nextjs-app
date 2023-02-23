@@ -9,7 +9,7 @@ export default function Home() {
         titleTemplate="Sample Nextjs App"
         description="Next.js + TypeScript SEO編"
         ogType="website"
-        imgUrl={`${process.env.NEXT_PUBLIC_DEFAULT_SITE_URL}{"/next.jpg"}`}
+        imgUrl={`${process.env.NEXT_PUBLIC_DEFAULT_SITE_URL}/next.jpg`}
       />
       <main className={styles.main}>
         <h1>Next.js + TypeScript Sample Project.</h1>

@@ -4,7 +4,7 @@ interface Props {}
 class Document extends NextDocument<Props> {
   render() {
     return (
-      <Html lang="ja" prefix="og: https://ogp.me/ns#">
+      <Html lang="ja">
         <Head />
         <body>
           <Main />

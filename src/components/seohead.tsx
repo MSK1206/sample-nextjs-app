@@ -16,22 +16,17 @@ export const SeoHead = ({
   const siteTitle = `${title} - ${titleTemplate}`;
   return (
     <Head>
+      <meta name="viewport" content={"width=device-width, initial-scale=1"} />
       <title>{siteTitle}</title>
+      <link href={Url} rel="canonical" />
+      <meta name="twitter:card" content={"summary_large_image"} />
+      <meta property="og:title" content={siteTitle} />
+      <meta property="og:url" content={Url} />
       <meta name="description" content={description} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={Url} />
       <meta property="og:image" content={imgUrl} />
-      <meta property="og:site_name" content={titleTemplate} />
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={Url} />
-      <meta property="twitter:title" content={title} />
-      <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={imgUrl} />
-      <link rel="canonical" href={Url} />
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href={"/favicon.ico"} />
     </Head>
   );
 };

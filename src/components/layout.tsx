@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 type LayoutProps = {
-  children: ReactNode;
+  children?: ReactNode;
 };
 
 function Layout({ children }: LayoutProps) {

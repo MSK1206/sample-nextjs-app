@@ -5,11 +5,11 @@ export default function Home() {
   return (
     <>
       <SeoHead
-        title="TOP"
-        titleTemplate="Sample Nextjs App"
-        description="Next.js + TypeScript SEO編"
-        ogType="website"
-        imgUrl={"https://sample-nextjs-app.vercel.app/eyecatch.png"}
+        title={"TOP"}
+        titleTemplate={"Sample Nextjs App"}
+        description={"Next.js + TypeScript SEO編"}
+        ogType={"website"}
+        imgUrl={"/next.jpg"}
       />
       <main className={styles.main}>
         <h1>Next.js + TypeScript Sample Project.</h1>

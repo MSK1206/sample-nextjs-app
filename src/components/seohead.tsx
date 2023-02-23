@@ -20,13 +20,13 @@ export const SeoHead = ({
       <title>{siteTitle}</title>
       <link href={Url} rel="canonical" />
       <meta name="twitter:card" content={"summary_large_image"} />
+      <meta property="og:image" content={imgUrl} />
       <meta property="og:title" content={siteTitle} />
       <meta property="og:url" content={Url} />
       <meta name="description" content={description} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={ogType} />
-      <meta property="og:image" content={imgUrl} />
-      <link rel="icon" href={"/favicon.ico"} />
+      <link rel="icon" type="image/svg+xml" href={"/favicon.svg"} />
     </Head>
   );
 };

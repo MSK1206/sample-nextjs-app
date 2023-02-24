@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <SeoHead
-        title={"TOP"}
+        title={"Home"}
         titleTemplate={"Sample Nextjs App"}
         description={"Next.js + TypeScript SEO編"}
         ogType={"website"}

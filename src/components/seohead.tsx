@@ -26,7 +26,7 @@ export const SeoHead = ({
       <meta name="description" content={description} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={ogType} />
-      <link rel="icon" type="image/svg+xml" href={"/favicon.svg"} />
+      <link rel="icon" type="image/svg+xml" href={"/samplelogo.svg"} />
     </Head>
   );
 };

@@ -1,9 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Limelight&family=Poppins&display=swap");
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+
+  /* Globals Using */
+  --global-font-family: "Poppins";
+  /* Bootstrap Using */
+  --blandname-font-size: 2rem;
 }
 
 * {
@@ -21,4 +28,109 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* Bootstrap Navbar */
+.navbar {
+  font-family: var(--global-font-family);
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: white;
+  border: 1px solid crimson;
+}
+#navbarNav {
+  justify-content: end;
+}
+.navbar-brand {
+  border: 1px solid blueviolet;
+}
+.blandname {
+  font-size: var(--blandname-font-size);
+  margin-left: 15px;
+  border: 1px solid yellowgreen;
+}
+.nav-item {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  padding: 20px 10px;
+  min-width: 10vw;
+  text-align: center;
+  border: 1px solid yellowgreen;
+}
+
+/* Responsive CSS */
+@media screen and (max-width: 845px) {
+  .navbar {
+    background-color: none;
+  }
+  .blandname {
+    display: none;
+  }
+  .navbar-nav li {
+    margin: 0 0;
+    text-align: start;
+  }
+  .nav-item {
+    padding: 15px 15px;
+  }
+}
+@media screen and (max-width: 813px) {
+  .blandname {
+    display: none;
+  }
+  .navbar-nav li {
+    margin: 0 0;
+    text-align: start;
+  }
+  .nav-item {
+    padding: 15px 15px;
+  }
+}
+@media screen and (max-width: 668px) {
+  .blandname {
+    display: none;
+  }
+  .navbar-nav li {
+    margin: 0 0;
+    text-align: start;
+  }
+  .nav-item {
+    padding: 15px 15px;
+  }
+}
+@media screen and (max-width: 415px) {
+  .blandname {
+    display: none;
+  }
+  .navbar-nav li {
+    margin: 0 0;
+    text-align: start;
+  }
+  .nav-item {
+    padding: 15px 15px;
+  }
+}
+@media screen and (max-width: 391px) {
+  .blandname {
+    display: none;
+  }
+  .navbar-nav li {
+    margin: 0 0;
+    text-align: start;
+  }
+  .nav-item {
+    padding: 15px 15px;
+  }
+}
+@media screen and (max-width: 376px) {
+  .blandname {
+    display: none;
+  }
+  .navbar-nav li {
+    margin: 0 0;
+    text-align: start;
+  }
+  .nav-item {
+    padding: 15px 15px;
+  }
 }

@@ -1,0 +1,8 @@
+.footer {
+  font-family: var(--global-font-family);
+  display: flex;
+  padding: 2rem 0;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}

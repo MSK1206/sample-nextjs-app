@@ -36,18 +36,13 @@ a {
   padding-top: 0;
   padding-bottom: 0;
   background-color: white;
-  border: 1px solid crimson;
 }
 #navbarNav {
   justify-content: end;
 }
-.navbar-brand {
-  border: 1px solid blueviolet;
-}
 .blandname {
   font-size: var(--blandname-font-size);
   margin-left: 15px;
-  border: 1px solid yellowgreen;
 }
 .nav-item {
   font-size: 1rem;
@@ -55,7 +50,6 @@ a {
   padding: 20px 10px;
   min-width: 10vw;
   text-align: center;
-  border: 1px solid yellowgreen;
 }
 
 /* Responsive CSS */

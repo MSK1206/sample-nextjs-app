@@ -37,7 +37,7 @@ export default function Navbar() {
             <Link onClick={hideToggle} href="/">
               <li className="nav-item">Home</li>
             </Link>
-            <Link onClick={hideToggle} href="/blog">
+            <Link onClick={hideToggle} href="/posts">
               <li className="nav-item">Blog</li>
             </Link>
             <Link onClick={hideToggle} href="/contact">

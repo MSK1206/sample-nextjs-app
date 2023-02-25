@@ -1,0 +1,19 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+.grid {
+  margin: 0;
+  padding: 0;
+}
+.grid li {
+  list-style: none;
+  text-decoration: none;
+}
+
+.eyecatch_img {
+  justify-content: start;
+}

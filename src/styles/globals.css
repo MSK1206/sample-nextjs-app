@@ -37,23 +37,26 @@ a {
   padding-bottom: 0;
   background-color: white;
 }
+.navbar-brand span {
+  text-decoration: none;
+}
 #navbarNav {
   justify-content: end;
 }
 .blandname {
-  color: inherit;
-  text-decoration: none;
   font-size: var(--blandname-font-size);
   margin-left: 15px;
 }
 .nav-item {
-  color: inherit;
-  text-decoration: none;
   font-size: 1rem;
   letter-spacing: 1px;
   padding: 20px 10px;
   min-width: 10vw;
   text-align: center;
+}
+.navbar-nav li {
+  list-style: none;
+  text-decoration: none;
 }
 
 /* Responsive CSS */

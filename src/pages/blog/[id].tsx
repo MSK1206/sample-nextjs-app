@@ -54,8 +54,9 @@ const BlogId: NextPage<BlogIdProps> = ({ blog }: any) => {
                   "YYYY" + "年" + "MM" + "月" + "DD" + "日" + "hh" + ":" + "mm"
                 )}
             </p>
-            <p className={styles.category}>
-              タグ：{blog.categories && `${blog.categories.name}`}
+            <p className={styles.categories}>
+              タグ：
+              {blog.categories && `${blog.categorie.name}`}
             </p>
 
             <div

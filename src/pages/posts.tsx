@@ -9,7 +9,6 @@ import timezone from "dayjs/plugin/timezone";
 dayjs.extend(utc);
 dayjs.extend(timezone);
 import styles from "@/styles/Posts.module.css";
-import base64url from "base64url";
 
 export const getStaticProps = async () => {
   const data = await client.get({ endpoint: "blog" });
@@ -39,10 +38,10 @@ export default function Posts({ blog }: PostsProps) {
         <ul className={styles.grid}>
           {blog.map((blog) => (
             <li key={blog.id}>
-              <Link href={`/blog/${blog.id}`}>
+              <Link href={`/blog/${blog.id}`} passHref>
                 <img
                   className={styles.eyecatch_img}
-                  src={`${blog.eyecatch.url}?txt64=MSK`}
+                  src={blog.eyecatch.url}
                   width={300}
                   height={175}
                   alt={blog.title}

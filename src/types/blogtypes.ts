@@ -10,7 +10,7 @@ export type BlogTypes = {
       name: string;
     },
     {
-      image: {
+      authorimg: {
         url: string;
         width: number;
         height: number;
@@ -24,7 +24,7 @@ export type BlogTypes = {
     width: number;
     height: number;
   };
-  category: [
+  categories: [
     {
       name: string;
     },

@@ -55,7 +55,7 @@ const BlogId: NextPage<BlogIdProps> = ({ blog }: any) => {
                 )}
             </p>
             <p className={styles.category}>
-              タグ：{blog.category && `${blog.category.name}`}
+              タグ：{blog.categories && `${blog.categories.name}`}
             </p>
 
             <div

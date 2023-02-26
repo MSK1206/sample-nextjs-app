@@ -1,5 +1,5 @@
-import { useEffect } from "react";
 import { SeoHead } from "@/components/seohead";
+import { useEffect } from "react";
 import styles from "@/styles/Contact.module.css";
 
 export default function Contact() {

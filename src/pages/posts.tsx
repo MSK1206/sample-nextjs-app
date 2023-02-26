@@ -38,7 +38,7 @@ export default function Posts({ blog }: PostsProps) {
         <ul className={styles.grid}>
           {blog.map((blog) => (
             <li key={blog.id}>
-              <Link href={`/blog/${blog.id}`} passHref>
+              <Link href={`/blog/${blog.id}`}>
                 <img
                   className={styles.eyecatch_img}
                   src={blog.eyecatch.url}

@@ -27,18 +27,6 @@ export type BlogTypes = {
   categories: [
     {
       name: string;
-    },
-    {
-      name: string;
-    },
-    {
-      name: string;
-    },
-    {
-      name: string;
-    },
-    {
-      name: string;
     }
   ];
 };

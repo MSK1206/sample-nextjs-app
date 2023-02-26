@@ -13,24 +13,6 @@ type BlogIdProps = {
   blog: BlogTypes[];
 };
 
-export const getStaticPaths = async () => {
-  const data = await client.get({ endpoint: "blog" });
-  const blog: BlogTypes[] = data.contents;
-  const paths = blog.map((content) => `/blog/${content.id}`);
-  return { paths, fallback: false };
-};
-
-export const getStaticProps = async (context: any) => {
-  const id = context.params.id;
-  const res: BlogTypes = await client.get({ endpoint: "blog", contentId: id });
-
-  return {
-    props: {
-      blog: res,
-    },
-  };
-};
-
 const BlogId: NextPage<BlogIdProps> = ({ blog }: any) => {
   return (
     <>
@@ -45,6 +27,8 @@ const BlogId: NextPage<BlogIdProps> = ({ blog }: any) => {
         <main className={styles.main}>
           <div>
             <h1 className={styles.title}>{blog.title}</h1>
+            <span>著者：{blog.author.name}</span>
+            <p>タグ:{blog.categories.name}</p>
             <p className={styles.publishedAt}>
               投稿日：
               {dayjs
@@ -54,11 +38,6 @@ const BlogId: NextPage<BlogIdProps> = ({ blog }: any) => {
                   "YYYY" + "年" + "MM" + "月" + "DD" + "日" + "hh" + ":" + "mm"
                 )}
             </p>
-            <p className={styles.categories}>
-              タグ：
-              {blog.categories && `${blog.categorie.name}`}
-            </p>
-
             <div
               className={styles.contentBody}
               dangerouslySetInnerHTML={{ __html: blog.content }}
@@ -71,3 +50,20 @@ const BlogId: NextPage<BlogIdProps> = ({ blog }: any) => {
 };
 
 export default BlogId;
+
+export const getStaticPaths = async () => {
+  const data = await client.get({ endpoint: "blog" });
+  const blog: BlogTypes[] = data.contents;
+  const paths = blog.map((content) => `/blog/${content.id}`);
+  return { paths, fallback: false };
+};
+
+export const getStaticProps = async (context: any) => {
+  const id = context.params.id;
+  const res: BlogTypes = await client.get({ endpoint: "blog", contentId: id });
+  return {
+    props: {
+      blog: res,
+    },
+  };
+};

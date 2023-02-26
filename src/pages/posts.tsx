@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import { NextPage } from "next";
 import { SeoHead } from "@/components/seohead";
 import { client } from "@/libs/client";
 import { BlogTypes } from "@/types/blogtypes";
@@ -10,10 +9,10 @@ import timezone from "dayjs/plugin/timezone";
 dayjs.extend(utc);
 dayjs.extend(timezone);
 import styles from "@/styles/Posts.module.css";
+import base64url from "base64url";
 
 export const getStaticProps = async () => {
   const data = await client.get({ endpoint: "blog" });
-
   return {
     props: {
       blog: data.contents,
@@ -43,7 +42,7 @@ export default function Posts({ blog }: PostsProps) {
               <Link href={`/blog/${blog.id}`}>
                 <img
                   className={styles.eyecatch_img}
-                  src={blog.eyecatch.url}
+                  src={`${blog.eyecatch.url}?txt64=MSK`}
                   width={300}
                   height={175}
                   alt={blog.title}

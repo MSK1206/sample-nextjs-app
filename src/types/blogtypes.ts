@@ -5,6 +5,18 @@ export type BlogTypes = {
   publishedAt: string;
   revisedAt: string;
   title: string;
+  author: [
+    {
+      name: string;
+    },
+    {
+      image: {
+        url: string;
+        width: number;
+        height: number;
+      };
+    }
+  ];
   description: string;
   body: string;
   eyecatch: {

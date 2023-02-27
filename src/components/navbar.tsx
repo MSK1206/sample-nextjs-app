@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Navbar() {
   const hideToggle = () => {
     document.querySelector<HTMLElement>("#navbarNav")?.classList.remove("show");
-    console.log("Navbar classList Remove.");
+    console.log("hiden toggle.");
   };
   return (
     <nav className="navbar navbar-expand-lg sticky-top navbar-light">

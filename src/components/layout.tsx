@@ -9,7 +9,7 @@ type LayoutProps = {
 function Layout({ children }: LayoutProps) {
   const hideToggle = () => {
     document.querySelector<HTMLElement>("#navbarNav")?.classList.remove("show");
-    console.log("Navbar classList Remove.");
+    console.log("hiden toggle.");
   };
   return (
     <>

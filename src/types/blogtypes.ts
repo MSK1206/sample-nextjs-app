@@ -24,8 +24,9 @@ export type BlogTypes = {
     width: number;
     height: number;
   };
-  categories: [
+  category: [
     {
+      id: string;
       name: string;
     }
   ];

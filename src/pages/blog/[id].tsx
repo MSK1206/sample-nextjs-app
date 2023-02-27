@@ -4,7 +4,6 @@ import { SeoHead } from "@/components/seohead";
 import { client } from "@/libs/client";
 import { BlogTypes } from "@/types/blogtypes";
 import { AuthorTypes } from "@/types/authortypes";
-import { CategoriesTypes } from "@/types/categoriestypes";
 import Link from "next/link";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
@@ -18,7 +17,7 @@ type BlogIdProps = {
   author: AuthorTypes[];
 };
 
-const BlogId: NextPage<BlogIdProps> = ({ blog, author, category }: any) => {
+const BlogId: NextPage<BlogIdProps> = ({ blog, author }: any) => {
   return (
     <>
       <SeoHead

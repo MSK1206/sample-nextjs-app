@@ -51,7 +51,7 @@ const BlogId: NextPage<BlogIdProps> = ({ blog, author, category }: any) => {
               <ul>
                 {blog.category.map((category: any) => (
                   <li key={category.id}>
-                    <Link href={`/categories/${category.id}`}>
+                    <Link href={`/category/${category.id}`}>
                       {category.name}
                     </Link>
                   </li>

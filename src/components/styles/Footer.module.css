@@ -6,3 +6,9 @@
   align-items: center;
   background-color: black;
 }
+
+.footer a {
+  color: white;
+  text-decoration-color: none;
+  text-decoration-line: none;
+}

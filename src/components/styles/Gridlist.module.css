@@ -1,0 +1,29 @@
+.grid {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 800px;
+  list-style: none;
+  padding: 0;
+}
+
+.grid li {
+  list-style: none;
+}
+
+.grid li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.gridcard {
+  max-width: 300px;
+}
+
+@media screen and (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}

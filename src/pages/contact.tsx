@@ -3,8 +3,8 @@ import { useEffect } from "react";
 import styles from "@/styles/Contact.module.css";
 
 export default function Contact() {
-  const pageOgImg: string = `${process.env.NEXT_PUBLIC_DEFAULT_SITE_URL}`;
   const FormrunID: string = `${process.env.NEXT_PUBLIC_FORMRUN_FORM_ID}`;
+  const pageOgImg: string = `${process.env.NEXT_PUBLIC_DEFAULT_SITE_URL}`;
   useEffect(() => {
     const head = document.getElementsByTagName("head")[0] as HTMLElement;
     const scriptUrl = document.createElement("script");
@@ -24,7 +24,7 @@ export default function Contact() {
         imgUrl={`${pageOgImg}/next.jpg`}
       />
       <main className={styles.main}>
-        <div className={styles.formrunWidth}>
+        <div className={styles.container}>
           <div
             className="formrun-embed"
             data-formrun-form={FormrunID}

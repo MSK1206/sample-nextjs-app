@@ -13,11 +13,7 @@ export default function Home() {
         imgUrl={`${pageOgImg}/next.jpg`}
       />
       <main className={styles.main}>
-        <div className={styles.container}>
-          <div className={styles.portfollio}>
-            <h1>Next.js + TypeScript Sample Project.</h1>
-          </div>
-        </div>
+        <h1>Next.js + TypeScript Sample Project.</h1>
       </main>
     </>
   );

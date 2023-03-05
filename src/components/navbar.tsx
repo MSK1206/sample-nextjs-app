@@ -18,7 +18,7 @@ export default function Navbar() {
               height="45"
               className="sampleLogo"
             />
-            <span className="blandname">Sample</span>
+            <span className="brandname">Sample</span>
           </div>
         </Link>
         <button

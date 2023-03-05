@@ -10,7 +10,7 @@
   /* Globals Using */
   --global-font-family: "Poppins";
   /* Bootstrap Using */
-  --blandname-font-size: 2rem;
+  --brandname-font-size: 2rem;
 }
 
 * {
@@ -42,8 +42,8 @@ a {
 #navbarNav {
   justify-content: end;
 }
-.blandname {
-  font-size: var(--blandname-font-size);
+.brandname {
+  font-size: var(--brandname-font-size);
   margin-left: 15px;
 }
 .nav-item {
@@ -59,7 +59,7 @@ a {
   .navbar {
     background-color: none;
   }
-  .blandname {
+  .brandname {
     display: none;
   }
   .navbar-nav li {
@@ -71,7 +71,7 @@ a {
   }
 }
 @media screen and (max-width: 813px) {
-  .blandname {
+  .brandname {
     display: none;
   }
   .navbar-nav li {
@@ -83,7 +83,7 @@ a {
   }
 }
 @media screen and (max-width: 668px) {
-  .blandname {
+  .brandname {
     display: none;
   }
   .navbar-nav li {
@@ -95,7 +95,7 @@ a {
   }
 }
 @media screen and (max-width: 415px) {
-  .blandname {
+  .brandname {
     display: none;
   }
   .navbar-nav li {
@@ -107,7 +107,7 @@ a {
   }
 }
 @media screen and (max-width: 391px) {
-  .blandname {
+  .brandname {
     display: none;
   }
   .navbar-nav li {
@@ -119,7 +119,7 @@ a {
   }
 }
 @media screen and (max-width: 376px) {
-  .blandname {
+  .brandname {
     display: none;
   }
   .navbar-nav li {

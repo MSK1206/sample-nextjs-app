@@ -29,15 +29,18 @@ export default function Posts({ blog, categories }: PostsProps) {
       />
       <main className={styles.main}>
         <div className={styles.categoriesLinkAlia}>
-          <ul>
-            {categories.map((categories) => (
-              <li key={categories.id}>
-                <Link href={`/category/${categories.id}`}>
-                  {categories.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <div>
+            タグ一覧
+            <ul className={styles.categoriesTag}>
+              {categories.map((categories) => (
+                <li key={categories.id}>
+                  <Link href={`/category/${categories.id}`}>
+                    {categories.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         <div className={styles.postsMap}>
           <ul className={styles.grid}>
@@ -51,24 +54,26 @@ export default function Posts({ blog, categories }: PostsProps) {
                     height={175}
                     alt={blog.title}
                   />
-                  <h5 className={styles.blogtitle}>{blog.title}</h5>
-                  <p className={styles.publishedAt}>
-                    投稿日：
-                    {dayjs
-                      .utc(blog.publishedAt)
-                      .tz("Asia/Tokyo")
-                      .format(
-                        "YYYY" +
-                          "年" +
-                          "MM" +
-                          "月" +
-                          "DD" +
-                          "日" +
-                          "hh" +
-                          ":" +
-                          "mm"
-                      )}
-                  </p>
+                  <div className={styles.postsAttr}>
+                    <p className={styles.publishedAt}>
+                      投稿日：
+                      {dayjs
+                        .utc(blog.publishedAt)
+                        .tz("Asia/Tokyo")
+                        .format(
+                          "YYYY" +
+                            "年" +
+                            "MM" +
+                            "月" +
+                            "DD" +
+                            "日" +
+                            "hh" +
+                            ":" +
+                            "mm"
+                        )}
+                    </p>
+                    <h5 className={styles.blogtitle}>{blog.title}</h5>
+                  </div>
                 </Link>
               </li>
             ))}

@@ -32,8 +32,6 @@ a {
 
 /* Bootstrap Navbar */
 .navbar {
-  list-style: none;
-  text-decoration: none;
   font-family: var(--global-font-family);
   padding-top: 0;
   padding-bottom: 0;
@@ -42,9 +40,15 @@ a {
 #navbarNav {
   justify-content: end;
 }
+.navbar-nav li {
+  list-style: none;
+  text-decoration: none;
+}
 .brandname {
   font-size: var(--brandname-font-size);
   margin-left: 15px;
+  list-style: none;
+  text-decoration: none;
 }
 .nav-item {
   font-size: 1rem;

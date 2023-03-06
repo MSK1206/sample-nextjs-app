@@ -1,0 +1,15 @@
+.container {
+  margin: 0;
+  padding: 0;
+  width: 95vw;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  & > formrun-embed {
+    width: 90vw;
+  }
+}

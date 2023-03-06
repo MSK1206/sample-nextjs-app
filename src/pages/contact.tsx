@@ -1,6 +1,6 @@
 import { SeoHead } from "@/components/seohead";
 import { useEffect } from "react";
-import styles from "@/styles/Contact.module.css";
+import styles from "@/styles/Contact.module.scss";
 
 export default function Contact() {
   const FormrunID: string = `${process.env.NEXT_PUBLIC_FORMRUN_FORM_ID}`;

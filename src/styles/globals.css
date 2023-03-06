@@ -38,14 +38,14 @@ a {
   background-color: white;
 }
 #del-liststyle a span {
-  list-style: none;
+  color: black;
   text-decoration: none;
 }
 #navbarNav {
   justify-content: end;
 }
 .navbar-nav {
-  list-style: none;
+  color: black;
   text-decoration: none;
 }
 .brandname {

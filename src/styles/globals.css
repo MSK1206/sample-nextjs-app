@@ -37,18 +37,20 @@ a {
   padding-bottom: 0;
   background-color: white;
 }
+#del-liststyle a {
+  list-style: none;
+  text-decoration: none;
+}
 #navbarNav {
   justify-content: end;
 }
-.navbar-nav li {
+.navbar-nav ul li a {
   list-style: none;
   text-decoration: none;
 }
 .brandname {
   font-size: var(--brandname-font-size);
   margin-left: 15px;
-  list-style: none;
-  text-decoration: none;
 }
 .nav-item {
   font-size: 1rem;

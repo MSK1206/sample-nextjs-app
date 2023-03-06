@@ -23,15 +23,15 @@ export default function Contact() {
         ogType={"website"}
         imgUrl={`${pageOgImg}/next.jpg`}
       />
-      <main className={styles.main}>
-        <div className={styles.container}>
+      <div className={styles.container}>
+        <main className={styles.main}>
           <div
             className="formrun-embed"
             data-formrun-form={FormrunID}
             data-formrun-redirect="true"
           />
-        </div>
-      </main>
+        </main>
+      </div>
     </>
   );
 }

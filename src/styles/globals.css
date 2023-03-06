@@ -44,7 +44,7 @@ a {
 #navbarNav {
   justify-content: end;
 }
-.navbar-nav ul li a {
+.navbar-nav ul a {
   list-style: none;
   text-decoration: none;
 }

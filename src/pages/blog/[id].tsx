@@ -10,7 +10,7 @@ import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 dayjs.extend(utc);
 dayjs.extend(timezone);
-import styles from "../../styles/BlogId.module.css";
+import styles from "../../styles/BlogId.module.scss";
 
 type BlogIdProps = {
   blog: BlogTypes[];
@@ -35,18 +35,20 @@ const BlogId: NextPage<BlogIdProps> = ({ blog, author }: any) => {
               <ul>
                 {author.map((author: any) => (
                   <li key={author.id}>
+                    <span>著者：</span>
                     <img
                       src={author.authorimg && `${author.authorimg.url}`}
-                      width={30}
-                      height={30}
-                      alt={"test"}
+                      width={20}
+                      height={20}
+                      alt={"MSKLOGO"}
                     />
-                    <h1>{author.name}</h1>
+                    <h1 className={styles.authorName}>{author.name}</h1>
                   </li>
                 ))}
               </ul>
             </div>
             <div className={styles.categoriesDataAlia}>
+              <span>タグ：</span>
               <ul>
                 {blog.category.map((category: any) => (
                   <li key={category.id}>

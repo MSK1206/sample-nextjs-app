@@ -7,6 +7,7 @@ import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 dayjs.extend(utc);
 dayjs.extend(timezone);
+import styles from "../../styles/CategoryId.module.css";
 
 type CategoryIdProps = {
   blog: BlogTypes[];
@@ -14,10 +15,17 @@ type CategoryIdProps = {
 
 const CategoryId: NextPage<CategoryIdProps> = ({ blog }) => {
   if (blog.length === 0) {
-    return <div>ブログコンテンツがありません</div>;
+    return (
+      <main className={styles.main}>
+        <div>
+          <h1>ブログコンテンツがありません</h1>
+        </div>
+      </main>
+    );
   }
+  0;
   return (
-    <div>
+    <main className={styles.main}>
       <ul>
         {blog.map((blog) => (
           <li key={blog.id}>
@@ -25,7 +33,7 @@ const CategoryId: NextPage<CategoryIdProps> = ({ blog }) => {
           </li>
         ))}
       </ul>
-    </div>
+    </main>
   );
 };
 

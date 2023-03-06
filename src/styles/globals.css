@@ -37,6 +37,10 @@ a {
   padding-bottom: 0;
   background-color: white;
 }
+.navbar div a {
+  text-decoration-color: none;
+  text-decoration-line: none;
+}
 .navbar-brand span {
   text-decoration: none;
 }

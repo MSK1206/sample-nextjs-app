@@ -68,6 +68,7 @@ const BlogId: NextPage<BlogIdProps> = ({ blog, author }: any) => {
                   "YYYY" + "年" + "MM" + "月" + "DD" + "日" + "hh" + ":" + "mm"
                 )}
             </p>
+
             <div
               className={styles.contentBody}
               dangerouslySetInnerHTML={{ __html: blog.content }}

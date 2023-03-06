@@ -37,14 +37,13 @@ a {
   padding-bottom: 0;
   background-color: white;
 }
-#del-liststyle a span {
-  color: black;
+.navbar-brand span {
   text-decoration: none;
 }
 #navbarNav {
   justify-content: end;
 }
-.navbar-nav {
+.navbar-nav a {
   color: black;
   text-decoration: none;
 }

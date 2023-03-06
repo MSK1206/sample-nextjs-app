@@ -8,7 +8,7 @@ export default function Navbar() {
   };
   return (
     <nav className="navbar navbar-expand-lg sticky-top navbar-light">
-      <div className="container-fluid" id="del-liststyle">
+      <div className="container-fluid">
         <Link onClick={hideToggle} href="/">
           <div className="navbar-brand d-inline-flex align-items-center justify-content-center">
             <Image

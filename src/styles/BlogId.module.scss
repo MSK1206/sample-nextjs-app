@@ -10,6 +10,11 @@
 
 $breakpoint: (
   "iphoneSE": "screen and (max-width: 376px)",
+  "iphone12Pro": "screen and (max-width: 391px)",
+  "iphone8Plus": "screen and (max-width: 415px)",
+  "iphoneSEhorizontal": "screen and (max-width: 668px)",
+  "iphoneXhorizontal": "screen and (max-width: 813px)",
+  "iphone12Prohorizontal": "screen and (max-width: 845px)",
 );
 
 .container {
@@ -52,12 +57,14 @@ $breakpoint: (
   & > ul {
     @include display-center();
     padding: 0;
+    margin-bottom: 0;
     & > li {
       list-style: none;
       margin-right: 1rem;
+
       & > a {
-        color: inherit;
         text-decoration: none;
+        font-size: 1rem;
       }
     }
   }
@@ -88,5 +95,74 @@ $breakpoint: (
   & > ol {
     list-style-type: decimal;
     list-style-position: inside;
+  }
+}
+
+/* responsive SCSS */
+@media #{ map-get($breakpoint, iphone12Prohorizontal) } {
+  .title {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+  .categoriesDataAlia {
+    & > span {
+      font-size: 0.85rem;
+    }
+    & > ul {
+      & > li {
+        & > a {
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }
+  .publishedAt {
+    font-size: 0.85rem;
+  }
+}
+@media #{ map-get($breakpoint, iphone12Pro) } {
+  .title {
+    inline-size: 340px;
+    overflow-wrap: break-word;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+  .categoriesDataAlia {
+    & > span {
+      font-size: 0.7rem;
+    }
+    & > ul {
+      & > li {
+        & > a {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+  .publishedAt {
+    font-size: 0.7rem;
+  }
+}
+@media #{ map-get($breakpoint, iphoneSE) } {
+  .title {
+    inline-size: 330px;
+    overflow-wrap: break-word;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+  .categoriesDataAlia {
+    & > span {
+      font-size: 0.7rem;
+    }
+    & > ul {
+      & > li {
+        & > a {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+  .publishedAt {
+    font-size: 0.7rem;
   }
 }

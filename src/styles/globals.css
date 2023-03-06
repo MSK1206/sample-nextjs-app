@@ -37,14 +37,14 @@ a {
   padding-bottom: 0;
   background-color: white;
 }
-#del-liststyle a {
+#del-liststyle a span {
   list-style: none;
   text-decoration: none;
 }
 #navbarNav {
   justify-content: end;
 }
-.navbar-nav ul a {
+.navbar-nav {
   list-style: none;
   text-decoration: none;
 }

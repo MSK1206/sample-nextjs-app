@@ -25,11 +25,13 @@ export default function Contact() {
       />
       <div className={styles.container}>
         <main className={styles.main}>
-          <div
-            className="formrun-embed"
-            data-formrun-form={FormrunID}
-            data-formrun-redirect="true"
-          />
+          <div className={styles.formrun_screen}>
+            <div
+              className="formrun-embed"
+              data-formrun-form={FormrunID}
+              data-formrun-redirect="true"
+            />
+          </div>
         </main>
       </div>
     </>

@@ -1,15 +1,31 @@
 .container {
-  margin: 0;
-  padding: 0;
-  width: 95vw;
+  padding: 0 2rem;
+  & > .main {
+    min-height: 100vh;
+    padding: 4rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & > .formrun_screen {
+      min-width: 85vw;
+    }
+  }
 }
 
-.main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  & > formrun-embed {
-    width: 90vw;
+@media screen and (max-width: 415px) {
+  .formrun_screen {
+    min-width: 95vw;
+  }
+}
+@media screen and (max-width: 391px) {
+  .formrun_screen {
+    min-width: 95vw;
+  }
+}
+@media screen and (max-width: 376px) {
+  .formrun_screen {
+    min-width: 90vw;
   }
 }

@@ -10,13 +10,17 @@ import timezone from "dayjs/plugin/timezone";
 dayjs.extend(utc);
 dayjs.extend(timezone);
 import styles from "@/styles/Posts.module.css";
+import { Pagination } from "@/components/pagination";
 
 type PostsProps = {
   blog: BlogTypes[];
   categories: CategoriesTypes[];
+  totalCount: number;
 };
 
-export default function Posts({ blog, categories }: PostsProps) {
+const PER_PAGE = 6;
+
+export default function Posts({ blog, categories, totalCount }: PostsProps) {
   const pageOgImg: string = `${process.env.NEXT_PUBLIC_DEFAULT_SITE_URL}`;
   return (
     <>
@@ -78,6 +82,7 @@ export default function Posts({ blog, categories }: PostsProps) {
               </li>
             ))}
           </ul>
+          <Pagination totalCount={totalCount} />
         </div>
       </main>
     </>
@@ -85,12 +90,16 @@ export default function Posts({ blog, categories }: PostsProps) {
 }
 
 export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: "blog" });
+  const data = await client.get({
+    endpoint: "blog",
+    queries: { offset: 0, limit: 6 },
+  });
   const categoryData = await client.get({ endpoint: "categories" });
   return {
     props: {
       blog: data.contents,
       categories: categoryData.contents,
+      totalCount: data.totalCount,
     },
   };
 };

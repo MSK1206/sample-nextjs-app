@@ -10,7 +10,7 @@ import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 dayjs.extend(utc);
 dayjs.extend(timezone);
-import styles from "../../../styles/BlogPageId.module.css";
+import styles from "../../../styles/BlogPageId.module.scss";
 
 type BlogPageIdProps = {
   blog: BlogTypes[];

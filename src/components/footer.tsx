@@ -1,4 +1,4 @@
-import styles from "@/components/styles/Footer.module.css";
+import styles from '@/components/styles/Footer.module.css'
 
 export default function Footer() {
   return (
@@ -13,5 +13,5 @@ export default function Footer() {
         </a>
       </footer>
     </>
-  );
+  )
 }

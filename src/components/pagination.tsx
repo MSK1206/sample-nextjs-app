@@ -1,14 +1,14 @@
-import Link from "next/link";
-import styles from "@/components/styles/Pagination.module.css";
+import Link from 'next/link'
+import styles from '@/components/styles/Pagination.module.css'
 
 type PaginationProps = {
-  totalCount: number;
-};
+  totalCount: number
+}
 
 export const Pagination = ({ totalCount }: PaginationProps) => {
-  const PER_PAGE = 5;
+  const PER_PAGE = 5
   const range = (start: number, end: number) =>
-    [...Array(end - start + 1)].map((_, i) => start + i);
+    [...Array(end - start + 1)].map((_, i) => start + i)
 
   return (
     <>
@@ -26,5 +26,5 @@ export const Pagination = ({ totalCount }: PaginationProps) => {
         </nav>
       </div>
     </>
-  );
-};
+  )
+}

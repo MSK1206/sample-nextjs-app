@@ -1,11 +1,11 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Navbar() {
   const hideToggle = () => {
-    document.querySelector<HTMLElement>("#navbarNav")?.classList.remove("show");
-    console.log("hiden toggle.");
-  };
+    document.querySelector<HTMLElement>('#navbarNav')?.classList.remove('show')
+    console.log('hiden toggle.')
+  }
   return (
     <nav className="navbar navbar-expand-lg sticky-top navbar-light">
       <div className="container-fluid">
@@ -47,5 +47,5 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
-  );
+  )
 }

@@ -1,30 +1,30 @@
 /* eslint-disable @next/next/no-img-element */
-import { NextPage } from "next";
-import { SeoHead } from "@/components/seohead";
-import { client } from "@/libs/client";
-import { BlogTypes } from "@/types/blogtypes";
-import { AuthorTypes } from "@/types/authortypes";
-import Link from "next/link";
-import dayjs from "dayjs";
-import utc from "dayjs/plugin/utc";
-import timezone from "dayjs/plugin/timezone";
-dayjs.extend(utc);
-dayjs.extend(timezone);
-import styles from "../../styles/BlogId.module.scss";
+import { NextPage } from 'next'
+import { SeoHead } from '@/components/seohead'
+import { client } from '@/libs/client'
+import { BlogTypes } from '@/types/blogtypes'
+import { AuthorTypes } from '@/types/authortypes'
+import Link from 'next/link'
+import dayjs from 'dayjs'
+import utc from 'dayjs/plugin/utc'
+import timezone from 'dayjs/plugin/timezone'
+dayjs.extend(utc)
+dayjs.extend(timezone)
+import styles from '../../styles/BlogId.module.scss'
 
 type BlogIdProps = {
-  blog: BlogTypes[];
-  author: AuthorTypes[];
-};
+  blog: BlogTypes[]
+  author: AuthorTypes[]
+}
 
 const BlogId: NextPage<BlogIdProps> = ({ blog, author }: any) => {
   return (
     <>
       <SeoHead
         title={blog.title}
-        titleTemplate={"Sample Nextjs App"}
+        titleTemplate={'Sample Nextjs App'}
         description={`${blog.description}`}
-        ogType={"article"}
+        ogType={'article'}
         imgUrl={blog.eyecatch.url}
       />
       <div className={styles.container}>
@@ -40,7 +40,7 @@ const BlogId: NextPage<BlogIdProps> = ({ blog, author }: any) => {
                       src={author.authorimg && `${author.authorimg.url}`}
                       width={20}
                       height={20}
-                      alt={"MSKLOGO"}
+                      alt={'MSKLOGO'}
                     />
                     <h1 className={styles.authorName}>{author.name}</h1>
                   </li>
@@ -63,9 +63,9 @@ const BlogId: NextPage<BlogIdProps> = ({ blog, author }: any) => {
               投稿日：
               {dayjs
                 .utc(blog.publishedAt)
-                .tz("Asia/Tokyo")
+                .tz('Asia/Tokyo')
                 .format(
-                  "YYYY" + "年" + "MM" + "月" + "DD" + "日" + "hh" + ":" + "mm"
+                  'YYYY' + '年' + 'MM' + '月' + 'DD' + '日' + 'hh' + ':' + 'mm'
                 )}
             </p>
 
@@ -77,28 +77,28 @@ const BlogId: NextPage<BlogIdProps> = ({ blog, author }: any) => {
         </main>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default BlogId;
+export default BlogId
 
 export const getStaticPaths = async () => {
-  const data = await client.get({ endpoint: "blog" });
-  const blog: BlogTypes[] = data.contents;
-  const paths = blog.map((content) => `/blog/${content.id}`);
-  return { paths, fallback: false };
-};
+  const data = await client.get({ endpoint: 'blog' })
+  const blog: BlogTypes[] = data.contents
+  const paths = blog.map((content) => `/blog/${content.id}`)
+  return { paths, fallback: false }
+}
 
 export const getStaticProps = async (context: any) => {
-  const id = context.params.id;
-  const res: BlogTypes = await client.get({ endpoint: "blog", contentId: id });
-  const authorData = await client.get({ endpoint: "author" });
-  const categoryData = await client.get({ endpoint: "categories" });
+  const id = context.params.id
+  const res: BlogTypes = await client.get({ endpoint: 'blog', contentId: id })
+  const authorData = await client.get({ endpoint: 'author' })
+  const categoryData = await client.get({ endpoint: 'categories' })
   return {
     props: {
       blog: res,
       author: authorData.contents,
       category: categoryData.contents,
     },
-  };
-};
+  }
+}

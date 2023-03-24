@@ -1,33 +1,33 @@
 export type BlogTypes = {
-  id: string;
-  createdAt: string;
-  updatedAt: string;
-  publishedAt: string;
-  revisedAt: string;
-  title: string;
+  id: string
+  createdAt: string
+  updatedAt: string
+  publishedAt: string
+  revisedAt: string
+  title: string
   author: [
     {
-      name: string;
+      name: string
     },
     {
       authorimg: {
-        url: string;
-        width: number;
-        height: number;
-      };
+        url: string
+        width: number
+        height: number
+      }
     }
-  ];
-  description: string;
-  body: string;
+  ]
+  description: string
+  body: string
   eyecatch: {
-    url: string;
-    width: number;
-    height: number;
-  };
+    url: string
+    width: number
+    height: number
+  }
   category: [
     {
-      id: string;
-      name: string;
+      id: string
+      name: string
     }
-  ];
-};
+  ]
+}

@@ -41,6 +41,7 @@ const BlogId: NextPage<BlogIdProps> = ({ blog, author }: any) => {
                       width={20}
                       height={20}
                       alt={'MSKLOGO'}
+                      placeholder={'empty'}
                     />
                     <h1 className={styles.authorName}>{author.name}</h1>
                   </li>

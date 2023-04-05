@@ -62,6 +62,7 @@ export default function BlogPageId({
                       width={300}
                       height={175}
                       alt={blog.title}
+                      placeholder={'empty'}
                     />
                     <div className={styles.postsAttr}>
                       <p className={styles.publishedAt}>

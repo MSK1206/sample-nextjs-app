@@ -5,6 +5,12 @@
 ## 簡単ではありますがSEO設定できます
 - metatagを編集される場合は、`src/components/seohead.tsx` より編集ください。
 
+## styling/UI
+- Bootstrapを使用してます。
+
+## メールフォーム
+- formrunを使用しています。
+
 ## Next.jsの公式ドキュメントは以下より参照ください
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Learn Next.js](https://nextjs.org/learn)
